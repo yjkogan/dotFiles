@@ -11,6 +11,9 @@ alias ll='ls -lha'
 alias ...='cd ../..'
 alias git=hub
 
+# Git Aliases
+git config --global alias.see "log --oneline --decorate --graph --all --simplify-by-decoration"
+
 # Git Autocomplete
 if [ -f /usr/local/git/contrib/completion/git-completion.bash ]; then
   . /usr/local/git/contrib/completion/git-completion.bash
