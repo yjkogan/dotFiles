@@ -14,6 +14,9 @@ alias git=hub
 # Git Aliases
 git config --global alias.see "log --oneline --decorate --graph --all --simplify-by-decoration"
 
+# Git color
+git config --global color.ui auto
+
 # Git Autocomplete
 if [ -f /usr/local/git/contrib/completion/git-completion.bash ]; then
   . /usr/local/git/contrib/completion/git-completion.bash
@@ -41,4 +44,3 @@ git_update_branch() {
 	echo 'Usage: git_update_branch BRANCH_NAME'
     fi
 }
-PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
