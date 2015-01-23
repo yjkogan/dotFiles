@@ -13,6 +13,7 @@ alias git=hub
 
 # Git Aliases
 git config --global alias.see "log --oneline --decorate --graph --all --simplify-by-decoration"
+git config --global alias.prune "fetch --prune"
 
 # Git color
 git config --global color.ui auto
@@ -34,7 +35,7 @@ git_update_branch() {
 	PREV_BRANCH=`git rev-parse --abbrev-ref HEAD`
 	SAVED=`git stash`
 	git checkout $1
-	git pull origin $1
+	git pull origin/$1
 	git checkout $PREV_BRANCH
 	if [[ $SAVED != "No local changes to save" ]]
 	then
