@@ -9,11 +9,15 @@ export PROMPT_COMMAND='echo -ne "\033]0;${PWD##*/}\007"'
 # Aliases
 alias ll='ls -lha'
 alias ...='cd ../..'
-alias git=hub
 
 # Git Aliases
 git config --global alias.see "log --oneline --decorate --graph --all --simplify-by-decoration"
 git config --global alias.prune "fetch --prune"
+git config --global alias.co checkout
+git config --global alias.br branch
+git config --global alias.ci commit
+git config --global alias.st status
+git config --global alias.last 'log -1 HEAD'
 
 # Git color
 git config --global color.ui auto
@@ -28,7 +32,7 @@ VISUAL=emacs; export VISUAL
 EDITOR=emacs; export EDITOR
 
 # Custom functions
-## Checks out and pulls a branch and then switches back to your current branch
+# Checks out and pulls a branch and then switches back to your current branch
 git_update_branch() {
     if [ $1 ]
     then
