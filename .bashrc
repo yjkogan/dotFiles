@@ -1,9 +1,24 @@
 # Colors
 export CLICOLOR=1
 export LSCOLORS=GxFxCxDxBxegedabagaced
+# Reset
+Color_Off='\e[0m'       # Text Reset
+
+# Regular Colors
+Black='\e[0;30m'        # Black
+Red='\e[0;31m'          # Red
+Green='\e[0;32m'        # Green
+Yellow='\e[0;33m'       # Yellow
+Blue='\e[0;34m'         # Blue
+Purple='\e[0;35m'       # Purple
+Cyan='\e[0;36m'         # Cyan
+White='\e[0;37m'        # White
+
+# Load in the git branch prompt script.
+source ~/.git-prompt.sh
 
 # Command prompt improvements
-export PS1="\D{%H:%M:%S} [\u@localhost \w]\$ "
+export PS1="\t \u \w\[\033[m\]\[$Cyan\]\$(__git_ps1)\[$White\]\$ "
 export PROMPT_COMMAND='echo -ne "\033]0;${PWD##*/}\007"'
 
 # Aliases
@@ -26,6 +41,9 @@ git config --global color.ui auto
 if [ -f /usr/local/git/contrib/completion/git-completion.bash ]; then
   . /usr/local/git/contrib/completion/git-completion.bash
 fi
+
+# Git Settings
+git config --global rerere.enabled true
 
 # Make emacs the default editor
 VISUAL=emacs; export VISUAL
