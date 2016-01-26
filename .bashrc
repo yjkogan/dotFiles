@@ -32,6 +32,7 @@ git config --global alias.br branch
 git config --global alias.smash "commit -am"
 git config --global alias.st status
 git config --global alias.last 'log -1 HEAD'
+git config --global alias.catchup "!f() { git fetch --prune && git pull; }; f"
 
 # Git color
 git config --global color.ui auto
