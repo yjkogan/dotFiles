@@ -33,6 +33,8 @@ git config --global alias.smash "commit -am"
 git config --global alias.st status
 git config --global alias.last 'log -1 HEAD'
 git config --global alias.tagsbydate "for-each-ref --sort=taggerdate --format '%(refname) %(taggerdate)' refs/tags"
+git config --global alias.sshow "!f() { git stash show stash^{/$*} -p; }; f"
+git config --global alias.sapply "!f() { git stash apply stash^{/$*}; }; f"
 
 # Git color
 git config --global color.ui auto
@@ -48,22 +50,3 @@ git config --global rerere.enabled true
 # Make emacs the default editor
 VISUAL=emacs; export VISUAL
 EDITOR=emacs; export EDITOR
-
-# Custom functions
-# Checks out and pulls a branch and then switches back to your current branch
-git_update_branch() {
-    if [ $1 ]
-    then
-	PREV_BRANCH=`git rev-parse --abbrev-ref HEAD`
-	SAVED=`git stash`
-	git checkout $1
-	git pull origin/$1
-	git checkout $PREV_BRANCH
-	if [[ $SAVED != "No local changes to save" ]]
-	then
-	    git stash pop
-	fi
-    else
-	echo 'Usage: git_update_branch BRANCH_NAME'
-    fi
-}
