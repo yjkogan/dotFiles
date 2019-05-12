@@ -41,6 +41,7 @@ git config --global color.ui auto
 
 # Git Settings
 git config --global rerere.enabled true
+git config --global pull.rebase true
 
 if [ -f ./.git-completion.bash ]; then
   . ./.git-completion.bash
