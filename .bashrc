@@ -14,13 +14,6 @@ Purple='\e[0;35m'       # Purple
 Cyan='\e[0;36m'         # Cyan
 White='\e[0;37m'        # White
 
-# Load in the git branch prompt script.
-source ./.git-prompt.sh
-
-# Command prompt improvements
-export PS1="\t \u \w\[\033[m\]\[$Cyan\]\$(__git_ps1)\[$White\]\$ "
-export PROMPT_COMMAND='echo -ne "\033]0;${PWD##*/}\007"'
-
 # Aliases
 alias ll='ls -lha'
 alias ...='cd ../..'
@@ -46,6 +39,13 @@ git config --global pull.rebase true
 if [ -f ./.git-completion.bash ]; then
   . ./.git-completion.bash
 fi
+
+# Load in the git branch prompt script.
+source ./.git-prompt.sh
+
+# Command prompt improvements
+export PS1="\t \u \w\[\033[m\]\[$Cyan\]\$(__git_ps1)\[$White\]\$ "
+export PROMPT_COMMAND='echo -ne "\033]0;${PWD##*/}\007"'
 
 # Make emacs the default editor
 VISUAL=emacs; export VISUAL
