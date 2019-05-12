@@ -15,7 +15,7 @@ Cyan='\e[0;36m'         # Cyan
 White='\e[0;37m'        # White
 
 # Load in the git branch prompt script.
-source ~/.git-prompt.sh
+source ./.git-prompt.sh
 
 # Command prompt improvements
 export PS1="\t \u \w\[\033[m\]\[$Cyan\]\$(__git_ps1)\[$White\]\$ "
@@ -39,13 +39,12 @@ git config --global alias.sapply "!f() { git stash apply stash^{/$*}; }; f"
 # Git color
 git config --global color.ui auto
 
-# Git Autocomplete
-if [ -f /usr/local/git/contrib/completion/git-completion.bash ]; then
-  . /usr/local/git/contrib/completion/git-completion.bash
-fi
-
 # Git Settings
 git config --global rerere.enabled true
+
+if [ -f ./.git-completion.bash ]; then
+  . ./.git-completion.bash
+fi
 
 # Make emacs the default editor
 VISUAL=emacs; export VISUAL
