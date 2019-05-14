@@ -36,12 +36,14 @@ git config --global color.ui auto
 git config --global rerere.enabled true
 git config --global pull.rebase true
 
-if [ -f ./.git-completion.bash ]; then
-  . ./.git-completion.bash
+this_dir="${BASH_SOURCE%/*}"
+
+if [ -f $this_dir/.git-completion.bash ]; then
+  . $this_dir/.git-completion.bash
 fi
 
 # Load in the git branch prompt script.
-source ./.git-prompt.sh
+source $this_dir/.git-prompt.sh
 
 # Command prompt improvements
 export PS1="\t \u \w\[\033[m\]\[$Cyan\]\$(__git_ps1)\[$White\]\$ "
