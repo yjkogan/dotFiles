@@ -17,6 +17,7 @@ White='\e[0;37m'        # White
 # Aliases
 alias ll='ls -lha'
 alias ...='cd ../..'
+alias who-has-the-port='sudo lsof -iTCP -sTCP:LISTEN -n -P'
 
 # Git Aliases
 git config --global alias.see "log --oneline --decorate --graph --all --simplify-by-decoration"
