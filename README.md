@@ -8,6 +8,7 @@ dotFiles
   - Firefox (?)
   - Chrome (?)
   - iTerm2
+- Use Keyboard Maestro for rebinding instead?
 
 ### Fix emacs meta keybindings on OS X
 [Article explaining](http://apple.stackexchange.com/questions/68716/emacsify-osx-throughout-word-forward-%E2%8C%A5-f-and-word-backward-%E2%8C%A5-b-instead)

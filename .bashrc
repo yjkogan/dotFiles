@@ -41,6 +41,8 @@ this_dir="${BASH_SOURCE%/*}"
 
 if [ -f $this_dir/.git-completion.bash ]; then
   . $this_dir/.git-completion.bash
+else
+  echo "No git completion script found"
 fi
 
 # Load in the git branch prompt script.
