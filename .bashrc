@@ -18,6 +18,7 @@ White='\e[0;37m'        # White
 alias ll='ls -lha'
 alias ...='cd ../..'
 alias who-has-the-port='sudo lsof -iTCP -sTCP:LISTEN -n -P'
+alias git_list_gone="git branch -vv | grep 'origin/.*: gone]' | awk '{print $1}'"
 
 # Git Aliases
 git config --global alias.see "log --oneline --decorate --graph --all --simplify-by-decoration"
