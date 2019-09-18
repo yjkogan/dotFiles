@@ -28,6 +28,7 @@ def install_all():
   install_iterm2()
   install_moom()
   install_things()
+  install_flux()
   install_vpn()
 
 def install_stub(app_name):
@@ -61,6 +62,9 @@ def install_iterm2():
 
 def install_moom():
     install_stub("Moom")
+
+def install_flux():
+    install_stub("Flux")
 
 def install_things():
     install_stub("Things 3")
