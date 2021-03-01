@@ -55,6 +55,6 @@ source $this_dir/.git-prompt.sh
 export PS1="\t \u \w\[\033[m\]\[$Cyan\]\$(__git_ps1)\[$White\]\$ "
 export PROMPT_COMMAND='echo -ne "\033]0;${PWD##*/}\007"'
 
-# Make emacs the default editor
-VISUAL=emacs; export VISUAL
-EDITOR=emacs; export EDITOR
+# Make VIM the default editor
+VISUAL=vim; export VISUAL
+EDITOR=vim; export EDITOR

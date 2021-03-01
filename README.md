@@ -8,6 +8,7 @@ dotFiles
   - Firefox (?)
   - Chrome (?)
   - iTerm2
+  - Disable browser navigation with swipe: `defaults write com.google.Chrome.plist AppleEnableSwipeNavigateWithScrolls -bool FALSE`
 - Use Keyboard Maestro for rebinding instead?
 
 ### Fix emacs meta keybindings on OS X
