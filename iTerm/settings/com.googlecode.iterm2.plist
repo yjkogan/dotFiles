@@ -20,6 +20,8 @@
 	<true/>
 	<key>HotkeyModifiers</key>
 	<integer>262401</integer>
+	<key>NeverBlockSystemShutdown</key>
+	<true/>
 	<key>New Bookmarks</key>
 	<array>
 		<dict>
@@ -638,5 +640,7 @@
 	<false/>
 	<key>WindowNumber</key>
 	<false/>
+	<key>findMode_iTerm</key>
+	<integer>0</integer>
 </dict>
 </plist>
